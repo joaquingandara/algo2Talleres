@@ -1,0 +1,6 @@
+/cygdrive/c/Users/joaco/Desktop/LabosAlgo2Local/labo01Clases/ejercitacion_uso_clases/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Users/joaco/Desktop/LabosAlgo2Local/labo01Clases/ejercitacion_uso_clases/cmake-build-debug/CMakeFiles/edit_cache.dir
+/cygdrive/c/Users/joaco/Desktop/LabosAlgo2Local/labo01Clases/ejercitacion_uso_clases/cmake-build-debug/CMakeFiles/gtest_main.dir
+/cygdrive/c/Users/joaco/Desktop/LabosAlgo2Local/labo01Clases/ejercitacion_uso_clases/cmake-build-debug/CMakeFiles/gtest.dir
+/cygdrive/c/Users/joaco/Desktop/LabosAlgo2Local/labo01Clases/ejercitacion_uso_clases/cmake-build-debug/CMakeFiles/tests_ejercitacion.dir
+/cygdrive/c/Users/joaco/Desktop/LabosAlgo2Local/labo01Clases/ejercitacion_uso_clases/cmake-build-debug/CMakeFiles/tests_algobot.dir

@@ -1,0 +1,12 @@
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/CMakeFiles/ej5_correrValgrind.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/CMakeFiles/ej2_correrValgrind.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/CMakeFiles/ej7.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/CMakeFiles/ej4.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/CMakeFiles/ej3_correrValgrind.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/CMakeFiles/ej3.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/CMakeFiles/ej1.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/CMakeFiles/ej6.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/CMakeFiles/gtest_main.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/CMakeFiles/gtest.dir

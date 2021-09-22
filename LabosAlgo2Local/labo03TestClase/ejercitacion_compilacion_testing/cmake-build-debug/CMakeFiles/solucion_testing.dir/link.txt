@@ -1,0 +1,1 @@
+/usr/bin/c++   -pthread -std=gnu++11 -ggdb3 -g -g   CMakeFiles/solucion_testing.dir/tests/solucion_testing.cpp.o CMakeFiles/solucion_testing.dir/src/Truco.cpp.o CMakeFiles/solucion_testing.dir/src/Libreta.cpp.o  -o solucion_testing  libgtest.a libgtest_main.a 

@@ -1,0 +1,1 @@
+/usr/bin/c++   -pthread -std=gnu++11 -ggdb3 -g -g   CMakeFiles/ej_testing.dir/tests/ej_testing.cpp.o CMakeFiles/ej_testing.dir/src/Truco.cpp.o CMakeFiles/ej_testing.dir/src/Libreta.cpp.o  -o ej_testing  libgtest.a libgtest_main.a 

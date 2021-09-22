@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="solucion"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="solucion_testing">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/solucion_testing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 solucion_testing"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="solucion_testing/fast">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/solucion_testing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 solucion_testing/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej3">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/ej3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej3"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej3/fast">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/ej3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej3/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej2">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/ej2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej2"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej2/fast">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/ej2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej2/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej_testing">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/ej_testing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej_testing"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej_testing/fast">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/ej_testing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej_testing/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej1">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/ej1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej1"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej1/fast">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/ej1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej1/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/src/Fecha.cpp">
+			<Option target="ej3"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/src/Funciones.cpp">
+			<Option target="ej3"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/src/Funciones.h">
+			<Option target="ej3"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/src/Libreta.cpp">
+			<Option target="solucion_testing"/>
+			<Option target="ej_testing"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/src/Libreta.h">
+			<Option target="solucion_testing"/>
+			<Option target="ej_testing"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/src/Periodo.cpp">
+			<Option target="ej3"/>
+			<Option target="ej2"/>
+			<Option target="ej1"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/src/Periodo.h">
+			<Option target="ej3"/>
+			<Option target="ej2"/>
+			<Option target="ej1"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/src/Truco.cpp">
+			<Option target="solucion_testing"/>
+			<Option target="ej_testing"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/src/Truco.h">
+			<Option target="solucion_testing"/>
+			<Option target="ej_testing"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/tests/ej1_periodo.cpp">
+			<Option target="ej1"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/tests/ej2_periodo_y_fecha.cpp">
+			<Option target="ej2"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/tests/ej3_funciones.cpp">
+			<Option target="ej3"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/tests/ej_testing.cpp">
+			<Option target="ej_testing"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/tests/gtest-1.8.1/gtest-all.cc">
+			<Option target="gtest"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/tests/gtest-1.8.1/gtest_main.cc">
+			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/tests/solucion_testing.cpp">
+			<Option target="solucion_testing"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="algo2_labo_clase4"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej5_correrValgrind">
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej5_correrValgrind"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej2_correrValgrind">
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej2_correrValgrind"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej7">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/ej7" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEJ=7"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej7"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej7/fast">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/ej7" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEJ=7"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej7/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej4">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/ej4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEJ=4"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej4"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej4/fast">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/ej4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEJ=4"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej4/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej3_correrValgrind">
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej3_correrValgrind"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej3">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/ej3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEJ=3"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej3"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej3/fast">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/ej3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEJ=3"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej3/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej1">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/ej1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEJ=1"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej1"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej1/fast">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/ej1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEJ=1"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej1/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej6">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/ej6" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEJ=6"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej6"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej6/fast">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/ej6" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DEJ=6"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej6/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/src/ConexionJugador.cpp">
+			<Option target="ej7"/>
+			<Option target="ej4"/>
+			<Option target="ej3"/>
+			<Option target="ej1"/>
+			<Option target="ej6"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/src/ConexionJugador.h">
+			<Option target="ej7"/>
+			<Option target="ej4"/>
+			<Option target="ej3"/>
+			<Option target="ej1"/>
+			<Option target="ej6"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/src/Internet.cpp">
+			<Option target="ej7"/>
+			<Option target="ej4"/>
+			<Option target="ej3"/>
+			<Option target="ej1"/>
+			<Option target="ej6"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/src/Internet.h">
+			<Option target="ej7"/>
+			<Option target="ej4"/>
+			<Option target="ej3"/>
+			<Option target="ej1"/>
+			<Option target="ej6"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/src/Proxy.cpp">
+			<Option target="ej4"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/src/Proxy.h">
+			<Option target="ej4"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/src/Proxy2.cpp">
+			<Option target="ej6"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/src/Proxy2.h">
+			<Option target="ej6"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/src/SistemaDeMensajes.cpp">
+			<Option target="ej7"/>
+			<Option target="ej4"/>
+			<Option target="ej3"/>
+			<Option target="ej1"/>
+			<Option target="ej6"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/src/SistemaDeMensajes.h">
+			<Option target="ej7"/>
+			<Option target="ej4"/>
+			<Option target="ej3"/>
+			<Option target="ej1"/>
+			<Option target="ej6"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/tests/gtest-1.8.1/gtest-all.cc">
+			<Option target="gtest"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/tests/gtest-1.8.1/gtest_main.cc">
+			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/tests/sdm_tests.cpp">
+			<Option target="ej4"/>
+			<Option target="ej3"/>
+			<Option target="ej1"/>
+			<Option target="ej6"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/tests/sdm_tests_bonus.cpp">
+			<Option target="ej7"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo04Memorias/ejercitacion_punteros/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

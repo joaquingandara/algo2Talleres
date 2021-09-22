@@ -1,0 +1,9 @@
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/CMakeFiles/solucion_testing.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/CMakeFiles/ej3.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/CMakeFiles/ej2.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/CMakeFiles/ej_testing.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/CMakeFiles/ej1.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/CMakeFiles/gtest_main.dir
+/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo03TestClase/ejercitacion_compilacion_testing/cmake-build-debug/CMakeFiles/gtest.dir
