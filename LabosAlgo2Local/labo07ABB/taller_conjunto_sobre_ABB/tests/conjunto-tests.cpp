@@ -189,3 +189,31 @@ TEST(conjunto_test, test_stress) {
 	    ASSERT_FALSE(c.pertenece(k));
     }
 }
+TEST(conjunto_test, test_siguiente_inorder2) {
+    Conjunto<int> c;
+    c.insertar(2);
+    c.insertar(1);
+    c.insertar(33);
+    c.insertar(0);
+    c.insertar(25);
+    c.insertar(11);
+    c.insertar(40);
+    c.insertar(34);
+    c.insertar(7);
+    c.insertar(12);
+    c.insertar(13);
+    c.insertar(36);
+    EXPECT_EQ(c.siguiente(36), 40);
+    EXPECT_EQ(c.siguiente(11), 12);
+    EXPECT_EQ(c.siguiente(33), 34);
+    EXPECT_EQ(c.siguiente(25), 33);
+}
+TEST(conjunto_test, test_remover_caso_hoja) {
+    Conjunto<int> c;
+    c.insertar(5);
+    c.insertar(6);
+    c.insertar(4);
+    c.remover(6);
+    EXPECT_EQ(c.cardinal(), 2);
+}
+
