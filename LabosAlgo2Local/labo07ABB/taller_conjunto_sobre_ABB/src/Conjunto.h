@@ -74,9 +74,9 @@ private:
 
     void insertarAux(const T &clave, Nodo *&elem);
 
-    void removerAux(const T &clave ,Nodo *&elem);
+    void removerAux(const T &clave, Nodo *&elem);
 
-    const T &sucesorAux(const T &clave) const;
+    const T &siguienteAux(const T &clave) const;
 
     const T &treeMinimum(Nodo *elem) const;
 

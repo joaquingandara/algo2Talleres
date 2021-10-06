@@ -1,5 +1,8 @@
 #include "Conjunto.h"
 
+/* De manera intercalada busque el nodo de manera iterativa y con recursion. En algunos casos por problemas que tuve.
+ * Utilize returns en medio de funciones , para seguir el algoritmo que me proponía el Cormen.
+ */
 
 template<class T>
 Conjunto<T>::Conjunto(): _raiz(nullptr), _longitud(0) {}
@@ -24,13 +27,11 @@ bool Conjunto<T>::perteneceAux(const T &clave, Nodo *elem) const {
             elem = elem->izq;
         }
     }
-
     if (elem != nullptr) {
         res = true;
     }
     return res;
 }
-
 
 template<class T>
 void Conjunto<T>::insertar(const T &clave) {
@@ -44,7 +45,7 @@ void Conjunto<T>::insertarAux(const T &clave,
         elem = new Nodo(clave);
         _longitud++;
     } else if (elem->valor == clave) {
-        //No hago nada , ya que la clave está en mi conjunto.
+        //No hago nada , ya que la clave está en mi conjunto. En el momento fue lo mejor que se me ocurrio.
     } else if (clave < elem->valor) {
         insertarAux(clave, elem->izq);
     } else if (elem->valor < clave) {
@@ -62,22 +63,21 @@ void Conjunto<T>::removerAux(const T &clave, Nodo *&elem) {
     if (elem->valor == clave) {
         if (elem->der == nullptr && elem->izq == nullptr) { // Caso 1: Es una hoja
             delete (elem);
-            elem = nullptr; // Sin esto su padre queda apuntando a cualquier lado.
+            elem = nullptr;
             _longitud--;
         } else if (elem->der == nullptr && elem->izq != nullptr) { // Caso 2: Un solo hijo izq
-            Nodo * temp = elem->izq;
+            Nodo *temp = elem->izq;
             delete (elem);
             elem = temp;
-            //elem->izq = nullptr;
             _longitud--;
         } else if (elem->der != nullptr && elem->izq == nullptr) { // Caso 2: Un solo hijo der
-            Nodo * temp = elem->der;
+            Nodo *temp = elem->der;
             delete (elem);
             elem = temp;
             _longitud--;
         } else { // Caso 3: tiene dos hijos.
             T sucesorInmed = siguiente(elem->valor);
-            removerAux(sucesorInmed,elem);
+            removerAux(sucesorInmed, elem);
             elem->valor = sucesorInmed;
         }
     } else if (clave < elem->valor) {
@@ -87,16 +87,16 @@ void Conjunto<T>::removerAux(const T &clave, Nodo *&elem) {
     }
 }
 
-// PRE: Se asume que el elemento recibido
-// se encuentra en el conjunto y existe un elemento siguiente.
+/*  PRE: Se asume que el elemento recibido
+    se encuentra en el conjunto y existe un elemento siguiente. */
 
 template<class T>
 const T &Conjunto<T>::siguiente(const T &clave) {
-    return sucesorAux(clave);
+    return siguienteAux(clave);
 }
 
 template<class T>
-const T &Conjunto<T>::sucesorAux(const T &clave) const { //Idea del Cormen
+const T &Conjunto<T>::siguienteAux(const T &clave) const { //Idea del Cormen
     Nodo *elem = _raiz;
     while (elem->valor != clave) {
         if (clave > elem->valor) {
@@ -105,7 +105,6 @@ const T &Conjunto<T>::sucesorAux(const T &clave) const { //Idea del Cormen
             elem = elem->izq;
         }
     }
-    // ver tema return.
     if (elem->der != nullptr) { // Caso 1 : existe un subarbol derecho
         return treeMinimum(elem->der);
     } else { // Caso 2 : NO existe un subarbol derecho
