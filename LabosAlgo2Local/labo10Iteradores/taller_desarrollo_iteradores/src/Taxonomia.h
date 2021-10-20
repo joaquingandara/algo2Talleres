@@ -18,12 +18,12 @@ public:
     Taxonomia(const string&);
     ~Taxonomia();
     void mostrar(ostream&) const;
+
 private:
         struct Nodo {
         T valor;
         vector<Nodo*> hijos;
         };
-
     // Invariante:
     // (1) _raiz != NULL
     // (2) para todo 0 <= i < _raiz->hijos.size():
@@ -107,13 +107,14 @@ public:
         // Pre: el iterador está posicionado sobre una categoría,
         // y además !esRaiz().
         void eliminarCategoria();
-
     private:
         // Constructor por defecto del iterador.
         // (Nota: puede construir un iterador inválido).
-        iterator();
-
-        // COMPLETAR
+        iterator(Nodo* act);
+        Nodo* actual_;
+        Nodo* raiz_;
+        vector<Nodo*> padres_;
+        // un array/cola/pila con los nodos padres , otro con los hijos anteriores.
     };
 
     // Devuelve un iterador válido al principio de la taxonomía.

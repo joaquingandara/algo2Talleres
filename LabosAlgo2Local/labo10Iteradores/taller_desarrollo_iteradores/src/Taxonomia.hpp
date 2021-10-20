@@ -81,33 +81,32 @@ void Taxonomia<T>::mostrar(ostream& os) const {
 // Devuelve un iterador válido al principio de la taxonomía.
 template<class T>
 typename Taxonomia<T>::iterator Taxonomia<T>::begin() {
-    return Taxonomia<T>::iterator();
+    return iterator(_raiz);
 }
 
 // Devuelve un iterador válido al final de la taxonomía.
 template<class T>
 typename Taxonomia<T>::iterator Taxonomia<T>::end() {
-    return Taxonomia<T>::iterator();
+    return iterator(nullptr);
 }
 
 // Constructor por defecto del iterador.
 // (Nota: puede construir un iterador inválido).
 template<class T>
-Taxonomia<T>::iterator::iterator() {
-}
+Taxonomia<T>::iterator::iterator(Nodo* act): actual_(act),raiz_(act) {}
 
 // Referencia mutable al nombre de la categoría actual.
 // Pre: el iterador está posicionado sobre una categoría.
 template<class T>
 T& Taxonomia<T>::iterator::operator*() const {
-    return *(new T());
+    return this->actual_->valor;
 }
 
 // Cantidad de subcategorías de la categoría actual.
 // Pre: el iterador está posicionado sobre una categoría.
 template<class T>
 int Taxonomia<T>::iterator::cantSubcategorias() const {
-    return -1;
+    return (this->actual_->hijos).size();
 }
 
 // Ubica el iterador sobre la i-ésima subcategoría.
@@ -115,13 +114,14 @@ int Taxonomia<T>::iterator::cantSubcategorias() const {
 // y además 0 <= i < cantSubcategorias().
 template<class T>
 void Taxonomia<T>::iterator::subcategoria(int i) {
+  this->actual_= (this->actual_->hijos)[i];
 }
 
 // Devuelve true sii la categoría actual es la raíz. 
 // Pre: el iterador está posicionado sobre una categoría.
 template<class T>
 bool Taxonomia<T>::iterator::esRaiz() const {
-    return false;
+    return raiz_ ==actual_;
 }
 
 // Ubica el iterador sobre la supercategoría de la categoría
@@ -137,7 +137,7 @@ void Taxonomia<T>::iterator::supercategoria() {
 template<class T>
 bool Taxonomia<T>::iterator::operator==(
         const Taxonomia<T>::iterator& otro) const {
-    return false;
+  return  (this->actual_ == otro.actual_);
 }
 
 // Ubica el iterador sobre la categoría siguiente a la actual
@@ -147,6 +147,7 @@ bool Taxonomia<T>::iterator::operator==(
 // de la taxonomía.
 template<class T>
 void Taxonomia<T>::iterator::operator++() {
+
 }
 
 // Ubica el iterador sobre la categoría anterior a la actual
