@@ -18,12 +18,12 @@ public:
     CONSTRUCTOR POR COPIA
     * Construye un diccionario por copia.
     **/
-    string_map(const string_map<T>& aCopiar);
+    string_map(const string_map<T> &aCopiar);
 
     /**
     OPERADOR ASIGNACION
      */
-    string_map& operator=(const string_map& d);
+    string_map &operator=(const string_map &d);
 
     /**
     DESTRUCTOR
@@ -34,7 +34,7 @@ public:
     INSERT 
     * Inserta un par clave, valor en el diccionario
     **/
-    void insert(const pair<string, T>&);
+    void insert(const pair<string, T> &);
 
     /**
     COUNT
@@ -51,8 +51,9 @@ public:
     --PRODUCE ALIASING--
     -- Versión modificable y no modificable
     **/
-    const T& at(const string& key) const;
-    T& at(const string& key);
+    const T &at(const string &key) const;
+
+    T &at(const string &key);
 
     /**
     ERASE
@@ -60,7 +61,7 @@ public:
     * PRE: La clave está definida.
     --PRODUCE ALIASING--
     **/
-    void erase(const string& key);
+    void erase(const string &key);
 
     /**
      SIZE
@@ -81,11 +82,23 @@ public:
 private:
 
     struct Nodo {
-        vector<Nodo*> siguientes;
-        T* definicion;
+        vector<Nodo *> siguientes;
+        T *definicion;
+
+        Nodo() : siguientes(256, nullptr),
+                 definicion(nullptr) {}
+
+        Nodo(T *def) : siguientes(256, nullptr),
+                       definicion(def) {}
     };
 
-    Nodo* raiz;
+    void eliminarNodo(Nodo *&n);
+
+    void agregarNodo(Nodo *&actual, Nodo *copia);
+    bool tieneHijos(Nodo* n);
+    void eraseAux(Nodo *n, string clave, int s);
+
+    Nodo *raiz;
     int _size;
 };
 
