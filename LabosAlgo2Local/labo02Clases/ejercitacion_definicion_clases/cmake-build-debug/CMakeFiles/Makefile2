@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases
+CMAKE_SOURCE_DIR = /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -107,18 +107,18 @@ clean: CMakeFiles/ej8.dir/clean
 # Target rules for target CMakeFiles/truco.dir
 
 # All Build rule for target.
-CMakeFiles/truco.dir/all: CMakeFiles/gtest.dir/all
 CMakeFiles/truco.dir/all: CMakeFiles/gtest_main.dir/all
+CMakeFiles/truco.dir/all: CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/truco.dir/build.make CMakeFiles/truco.dir/depend
 	$(MAKE) -f CMakeFiles/truco.dir/build.make CMakeFiles/truco.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=37,38 "Built target truco"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=37,38 "Built target truco"
 .PHONY : CMakeFiles/truco.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/truco.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/truco.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/truco.dir/rule
 
 # Convenience name for target.
@@ -135,18 +135,18 @@ CMakeFiles/truco.dir/clean:
 # Target rules for target CMakeFiles/ej15.dir
 
 # All Build rule for target.
-CMakeFiles/ej15.dir/all: CMakeFiles/gtest.dir/all
 CMakeFiles/ej15.dir/all: CMakeFiles/gtest_main.dir/all
+CMakeFiles/ej15.dir/all: CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/ej15.dir/build.make CMakeFiles/ej15.dir/depend
 	$(MAKE) -f CMakeFiles/ej15.dir/build.make CMakeFiles/ej15.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target ej15"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target ej15"
 .PHONY : CMakeFiles/ej15.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ej15.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ej15.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ej15.dir/rule
 
 # Convenience name for target.
@@ -163,18 +163,18 @@ CMakeFiles/ej15.dir/clean:
 # Target rules for target CMakeFiles/libreta.dir
 
 # All Build rule for target.
-CMakeFiles/libreta.dir/all: CMakeFiles/gtest.dir/all
 CMakeFiles/libreta.dir/all: CMakeFiles/gtest_main.dir/all
+CMakeFiles/libreta.dir/all: CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/libreta.dir/build.make CMakeFiles/libreta.dir/depend
 	$(MAKE) -f CMakeFiles/libreta.dir/build.make CMakeFiles/libreta.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=35,36 "Built target libreta"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=35,36 "Built target libreta"
 .PHONY : CMakeFiles/libreta.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/libreta.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/libreta.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/libreta.dir/rule
 
 # Convenience name for target.
@@ -191,18 +191,18 @@ CMakeFiles/libreta.dir/clean:
 # Target rules for target CMakeFiles/ej14.dir
 
 # All Build rule for target.
-CMakeFiles/ej14.dir/all: CMakeFiles/gtest.dir/all
 CMakeFiles/ej14.dir/all: CMakeFiles/gtest_main.dir/all
+CMakeFiles/ej14.dir/all: CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/ej14.dir/build.make CMakeFiles/ej14.dir/depend
 	$(MAKE) -f CMakeFiles/ej14.dir/build.make CMakeFiles/ej14.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target ej14"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target ej14"
 .PHONY : CMakeFiles/ej14.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ej14.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ej14.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ej14.dir/rule
 
 # Convenience name for target.
@@ -219,18 +219,18 @@ CMakeFiles/ej14.dir/clean:
 # Target rules for target CMakeFiles/ej13.dir
 
 # All Build rule for target.
-CMakeFiles/ej13.dir/all: CMakeFiles/gtest.dir/all
 CMakeFiles/ej13.dir/all: CMakeFiles/gtest_main.dir/all
+CMakeFiles/ej13.dir/all: CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/ej13.dir/build.make CMakeFiles/ej13.dir/depend
 	$(MAKE) -f CMakeFiles/ej13.dir/build.make CMakeFiles/ej13.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target ej13"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target ej13"
 .PHONY : CMakeFiles/ej13.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ej13.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ej13.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ej13.dir/rule
 
 # Convenience name for target.
@@ -247,18 +247,18 @@ CMakeFiles/ej13.dir/clean:
 # Target rules for target CMakeFiles/ej10.dir
 
 # All Build rule for target.
-CMakeFiles/ej10.dir/all: CMakeFiles/gtest.dir/all
 CMakeFiles/ej10.dir/all: CMakeFiles/gtest_main.dir/all
+CMakeFiles/ej10.dir/all: CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/ej10.dir/build.make CMakeFiles/ej10.dir/depend
 	$(MAKE) -f CMakeFiles/ej10.dir/build.make CMakeFiles/ej10.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target ej10"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target ej10"
 .PHONY : CMakeFiles/ej10.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ej10.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ej10.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ej10.dir/rule
 
 # Convenience name for target.
@@ -275,18 +275,18 @@ CMakeFiles/ej10.dir/clean:
 # Target rules for target CMakeFiles/ej2.dir
 
 # All Build rule for target.
-CMakeFiles/ej2.dir/all: CMakeFiles/gtest.dir/all
 CMakeFiles/ej2.dir/all: CMakeFiles/gtest_main.dir/all
+CMakeFiles/ej2.dir/all: CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/ej2.dir/build.make CMakeFiles/ej2.dir/depend
 	$(MAKE) -f CMakeFiles/ej2.dir/build.make CMakeFiles/ej2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target ej2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target ej2"
 .PHONY : CMakeFiles/ej2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ej2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ej2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ej2.dir/rule
 
 # Convenience name for target.
@@ -303,18 +303,18 @@ CMakeFiles/ej2.dir/clean:
 # Target rules for target CMakeFiles/ej3.dir
 
 # All Build rule for target.
-CMakeFiles/ej3.dir/all: CMakeFiles/gtest.dir/all
 CMakeFiles/ej3.dir/all: CMakeFiles/gtest_main.dir/all
+CMakeFiles/ej3.dir/all: CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/ej3.dir/build.make CMakeFiles/ej3.dir/depend
 	$(MAKE) -f CMakeFiles/ej3.dir/build.make CMakeFiles/ej3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target ej3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target ej3"
 .PHONY : CMakeFiles/ej3.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ej3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ej3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ej3.dir/rule
 
 # Convenience name for target.
@@ -331,18 +331,18 @@ CMakeFiles/ej3.dir/clean:
 # Target rules for target CMakeFiles/ej4.dir
 
 # All Build rule for target.
-CMakeFiles/ej4.dir/all: CMakeFiles/gtest.dir/all
 CMakeFiles/ej4.dir/all: CMakeFiles/gtest_main.dir/all
+CMakeFiles/ej4.dir/all: CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/ej4.dir/build.make CMakeFiles/ej4.dir/depend
 	$(MAKE) -f CMakeFiles/ej4.dir/build.make CMakeFiles/ej4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target ej4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target ej4"
 .PHONY : CMakeFiles/ej4.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ej4.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ej4.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ej4.dir/rule
 
 # Convenience name for target.
@@ -359,18 +359,18 @@ CMakeFiles/ej4.dir/clean:
 # Target rules for target CMakeFiles/ej12.dir
 
 # All Build rule for target.
-CMakeFiles/ej12.dir/all: CMakeFiles/gtest.dir/all
 CMakeFiles/ej12.dir/all: CMakeFiles/gtest_main.dir/all
+CMakeFiles/ej12.dir/all: CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/ej12.dir/build.make CMakeFiles/ej12.dir/depend
 	$(MAKE) -f CMakeFiles/ej12.dir/build.make CMakeFiles/ej12.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target ej12"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target ej12"
 .PHONY : CMakeFiles/ej12.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ej12.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ej12.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ej12.dir/rule
 
 # Convenience name for target.
@@ -390,14 +390,14 @@ CMakeFiles/ej12.dir/clean:
 CMakeFiles/gtest_main.dir/all:
 	$(MAKE) -f CMakeFiles/gtest_main.dir/build.make CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f CMakeFiles/gtest_main.dir/build.make CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=33,34 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=33,34 "Built target gtest_main"
 .PHONY : CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
@@ -414,18 +414,18 @@ CMakeFiles/gtest_main.dir/clean:
 # Target rules for target CMakeFiles/ej1.dir
 
 # All Build rule for target.
-CMakeFiles/ej1.dir/all: CMakeFiles/gtest.dir/all
 CMakeFiles/ej1.dir/all: CMakeFiles/gtest_main.dir/all
+CMakeFiles/ej1.dir/all: CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/ej1.dir/build.make CMakeFiles/ej1.dir/depend
 	$(MAKE) -f CMakeFiles/ej1.dir/build.make CMakeFiles/ej1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target ej1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target ej1"
 .PHONY : CMakeFiles/ej1.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ej1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ej1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ej1.dir/rule
 
 # Convenience name for target.
@@ -442,18 +442,18 @@ CMakeFiles/ej1.dir/clean:
 # Target rules for target CMakeFiles/ej7.dir
 
 # All Build rule for target.
-CMakeFiles/ej7.dir/all: CMakeFiles/gtest.dir/all
 CMakeFiles/ej7.dir/all: CMakeFiles/gtest_main.dir/all
+CMakeFiles/ej7.dir/all: CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/ej7.dir/build.make CMakeFiles/ej7.dir/depend
 	$(MAKE) -f CMakeFiles/ej7.dir/build.make CMakeFiles/ej7.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=25,26 "Built target ej7"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=25,26 "Built target ej7"
 .PHONY : CMakeFiles/ej7.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ej7.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ej7.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ej7.dir/rule
 
 # Convenience name for target.
@@ -473,14 +473,14 @@ CMakeFiles/ej7.dir/clean:
 CMakeFiles/gtest.dir/all:
 	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/depend
 	$(MAKE) -f CMakeFiles/gtest.dir/build.make CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=31,32 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=31,32 "Built target gtest"
 .PHONY : CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
@@ -497,18 +497,18 @@ CMakeFiles/gtest.dir/clean:
 # Target rules for target CMakeFiles/ej6.dir
 
 # All Build rule for target.
-CMakeFiles/ej6.dir/all: CMakeFiles/gtest.dir/all
 CMakeFiles/ej6.dir/all: CMakeFiles/gtest_main.dir/all
+CMakeFiles/ej6.dir/all: CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/ej6.dir/build.make CMakeFiles/ej6.dir/depend
 	$(MAKE) -f CMakeFiles/ej6.dir/build.make CMakeFiles/ej6.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=23,24 "Built target ej6"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=23,24 "Built target ej6"
 .PHONY : CMakeFiles/ej6.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ej6.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ej6.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ej6.dir/rule
 
 # Convenience name for target.
@@ -525,18 +525,18 @@ CMakeFiles/ej6.dir/clean:
 # Target rules for target CMakeFiles/ej9.dir
 
 # All Build rule for target.
-CMakeFiles/ej9.dir/all: CMakeFiles/gtest.dir/all
 CMakeFiles/ej9.dir/all: CMakeFiles/gtest_main.dir/all
+CMakeFiles/ej9.dir/all: CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/ej9.dir/build.make CMakeFiles/ej9.dir/depend
 	$(MAKE) -f CMakeFiles/ej9.dir/build.make CMakeFiles/ej9.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=29,30 "Built target ej9"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=29,30 "Built target ej9"
 .PHONY : CMakeFiles/ej9.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ej9.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ej9.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ej9.dir/rule
 
 # Convenience name for target.
@@ -553,18 +553,18 @@ CMakeFiles/ej9.dir/clean:
 # Target rules for target CMakeFiles/ej11.dir
 
 # All Build rule for target.
-CMakeFiles/ej11.dir/all: CMakeFiles/gtest.dir/all
 CMakeFiles/ej11.dir/all: CMakeFiles/gtest_main.dir/all
+CMakeFiles/ej11.dir/all: CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/ej11.dir/build.make CMakeFiles/ej11.dir/depend
 	$(MAKE) -f CMakeFiles/ej11.dir/build.make CMakeFiles/ej11.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target ej11"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target ej11"
 .PHONY : CMakeFiles/ej11.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ej11.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ej11.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ej11.dir/rule
 
 # Convenience name for target.
@@ -581,18 +581,18 @@ CMakeFiles/ej11.dir/clean:
 # Target rules for target CMakeFiles/ej5.dir
 
 # All Build rule for target.
-CMakeFiles/ej5.dir/all: CMakeFiles/gtest.dir/all
 CMakeFiles/ej5.dir/all: CMakeFiles/gtest_main.dir/all
+CMakeFiles/ej5.dir/all: CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/ej5.dir/build.make CMakeFiles/ej5.dir/depend
 	$(MAKE) -f CMakeFiles/ej5.dir/build.make CMakeFiles/ej5.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=21,22 "Built target ej5"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=21,22 "Built target ej5"
 .PHONY : CMakeFiles/ej5.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ej5.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ej5.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ej5.dir/rule
 
 # Convenience name for target.
@@ -609,18 +609,18 @@ CMakeFiles/ej5.dir/clean:
 # Target rules for target CMakeFiles/ej8.dir
 
 # All Build rule for target.
-CMakeFiles/ej8.dir/all: CMakeFiles/gtest.dir/all
 CMakeFiles/ej8.dir/all: CMakeFiles/gtest_main.dir/all
+CMakeFiles/ej8.dir/all: CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/ej8.dir/build.make CMakeFiles/ej8.dir/depend
 	$(MAKE) -f CMakeFiles/ej8.dir/build.make CMakeFiles/ej8.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=27,28 "Built target ej8"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles --progress-num=27,28 "Built target ej8"
 .PHONY : CMakeFiles/ej8.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ej8.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ej8.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/joaco/Desktop/Git/algo2Talleres/LabosAlgo2Local/labo02Clases/ejercitacion_definicion_clases/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ej8.dir/rule
 
 # Convenience name for target.

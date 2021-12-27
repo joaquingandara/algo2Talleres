@@ -10,33 +10,45 @@ using namespace std;
 template<class T>
 class ColaPrior {
 public:
-	ColaPrior();
+    ColaPrior();
 
-	// Cantidad de elementos en la cola.
-	int tam() const;
+    // Cantidad de elementos en la cola.
+    int tam() const;
 
-	// Encola un elemento.
-	//
-	// Nota: si se implementa usando un vector, es O(n) en peor caso.
-	//
-	void encolar(const T& elem);
+    // Encola un elemento.
+    //
+    // Nota: si se implementa usando un vector, es O(n) en peor caso.
+    //
+    void encolar(const T &elem);
 
-	// Devuelve el elemento de mayor prioridad.
-	// Pre: tam() > 0
-	const T& proximo() const;
+    // Devuelve el elemento de mayor prioridad.
+    // Pre: tam() > 0
+    const T &proximo() const;
 
-	// Saca el elemento de mayor prioridad.
-	//
-	// Nota: si se implementa usando un vector, es O(n) en peor caso.
-	//
-	// Pre: tam() > 0
-	void desencolar();
+    // Saca el elemento de mayor prioridad.
+    //
+    // Nota: si se implementa usando un vector, es O(n) en peor caso.
+    //
+    // Pre: tam() > 0
+    void desencolar();
 
-	// Constructor que hace heapify.
-	ColaPrior(const vector<T>& elems);
+    // Constructor que hace heapify.
+    ColaPrior(const vector<T> &elems);
 
 private:
-	// COMPLETAR
+    vector<T> _heap;
+    int _longitud;
+
+    //Funciones auxiliares
+    int hijoIzq(int i);
+
+    int hijoDER(int i);
+
+    int padre(int i);
+
+    void siftUp(int i);
+
+    void siftDown(int i);
 };
 
 #include "ColaPrior.hpp"
