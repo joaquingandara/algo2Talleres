@@ -1,0 +1,461 @@
+Trabajo Practico n°2, Taller de Algoritmos y Estructuras de Datos II.
+--- GRUPO GAJE ---
+Agustina Borsato LU: 41/21 
+Emanuel Porres LU: 264/20
+Guillermina Cabrol LU: 582/20
+Joaquín Gándara Stepñicka LU: 649/20
+-------------------------------------
+MODULO Mapa
+1) Interfaz:
+	Parámetros formales:
+		Géneros:	α
+	Se explica con:	Mapa
+	Géneros:		mapa
+	
+	Operaciones básicas: 
+		nuevoMapa(in alto: nat,in ancho: nat,in rs: diccTrie(color,pos))	-> res: Mapa
+		Pre ≡ {((∀ c:color) def?(c,rs) ⇒L (1 ≤ π₁(obtener(c, rs)) ≤ ancho ∧ 1 ≤ π₂(obtener(c, rs)) ≤ alto)) 
+		∧ ((∀ c1,c2: color)(def?(c1,rs) ∧ def?(c2,rs) ∧ c1 ≠ c2) ⇒L obtener(c1,rs) ≠ obtener(c2,rs))}
+		Post ≡ {res =obs nuevoMapa(alto,ancho,rs)}
+		Complejidad: Θ(1)
+		Descripción: Genera un nuevo mapa.
+		Aliasing: Devuelve una referencia al nuevo mapa.
+		---
+		agregarPared(in/out mapa: matriz,in pos: coordenada)		
+		Pre ≡ {mapa = mapa₀ ∧ enRango(mapa,pos) ∧L esPiso(mapa,pos) ∧ (∀ p:coordenada)(enRango(m,p) ∧L dist(pos,p) = 1 ∧ esRampa(m,p')) ⇒L ((∃ p': coordenada) p ≠ p' ∧ enRango(mapa,p') ∧L dist(p,p') = 1 ∧ esPiso(m,p'))}
+		Post ≡ {mapa = agregarPared(mapa₀,pos)}
+		Complejidad: Θ(1)
+		Descripción: Agrega una pared en la posicion pos del mapa pasado como parametro. 
+		Aliasing: No presenta aspectos de aliasing.
+		---
+		agregarRampa(in/out mapa: matriz,in pos:coordenada)	
+		Pre ≡ {mapa = mapa₀ ∧ enRango(mapa, pos) ∧L esPiso(mapa, pos) ∧ 
+					((∃ p': coordenada) enRango(mapa, p') ∧L dist(p', pos) = 1 ∧ esPared(m,p')) ∧
+					((∃ p': coordenada) enRango(mapa, p') ∧L dist(p', pos) = 1 ∧ esPiso(m, p')) ∧ 
+					((∀p': coordenada)(enRango(mapa, p') ∧L dist(p, p') = 1 ∧ esRampa(m,p')) ⇒L ((∃p'': pos) pos ≠ p''∧ 
+					enRango(mapa, p'') ∧L dist(p', p'') = 1 ∧ esPiso(mapa,p'')))
+					}
+		Post ≡ {mapa = agregarRampa(mapa₀,pos)}
+		Complejidad: Θ(1)
+		Descripción: Agrega una rampa en la posicion pos del mapa pasado como parametro. 
+		Aliasing: No presenta aspectos de aliasing.
+		---
+		esPiso(in mapa: matriz,in pos: coordenada)	-> res: bool
+		Pre ≡ {enRango(mapa,pos)}
+		Post ≡ {res = true ⇐⇒ esPiso(mapa,pos)}
+		Complejidad: Θ(1)
+		Descripción: Verifica que la posicion pos del mapa pasado como parametro sea un piso. 
+		Aliasing: No presenta aspectos de aliasing.
+		---
+		esPared(in mapa: matriz,in pos: coordenada)	-> res: bool
+		Pre ≡ {enRango(mapa,pos)}
+		Post ≡ {res = true ⇐⇒ esPared(mapa,pos)}
+		Complejidad: Θ(1)
+		Descripción: Verifica que la posicion pos del mapa pasado como parametro sea una pared. 
+		Aliasing: No presenta aspectos de aliasing.
+		---
+		esRampa(in mapa: matriz,in pos: coordenada)	-> res: bool
+		Pre ≡ {enRango(mapa,pos)}
+		Post ≡ {res = true ⇐⇒ esRampa(mapa,pos)}
+		Complejidad: Θ(1)
+		Descripción: Verifica que la posicion pos del mapa pasado como parametro es una rampa. 
+		Aliasing: No presenta aspectos de aliasing.
+		---
+		enRango(in mapa: matriz,in pos: coordenada)	-> res: bool 
+		Pre ≡ {true}
+		Post ≡ {res = true ⇐⇒ enRango(mapa,pos)}
+		Complejidad: Θ(1)
+		Descripción: Indica si una coordenada esta en rango en funcion del alto y largo del mapa. 
+		Aliasing: No presenta aspectos de aliasing.
+		---
+		dist(in pos1: coordenada, in pos2: coordenada)	-> res: nat 
+		Pre ≡ {true}
+		Post ≡ {res =obs distancia(pos1,pos2)}
+		Complejidad: Θ(1)
+		Descripción: Indica la distancia entre la posicion pos y pos2. 
+		Aliasing: No presenta aspectos de aliasing.		
+		
+------------------------------------------------------------------------
+
+2) Implementacion 		
+	
+a) Representación:
+	Mapa se representa con estr donde 
+		estr es tupla ⟨	ancho: nat, alto: nat, 
+										receptaculos: diccTrie(color,pos),
+										mapa: vector<vector<nat>>,
+										⟩
+
+b) Invariante de Representación:
+	- Para toda clave def? en e.receptaculo su significado debe estar en rango. 
+  - Todas las claves def? en e.receptaculo deber tener un significado (pos) diferente, es decir, no puede haber dos claves con el mismo significado (pos)
+	- La cantidad de filas de e.mapa debe ser igual al valor de e.alto.
+	- La cantidad de columnas de e.mapa debe ser igual a e.ancho.
+	- Todas las posiciones en rango de e.mapa deben tener como valor 0, 1 o 2.
+	- Para toda posicion de e.mapa cuyo valor es 1 una de sus posiciones adyacentes deber ser 2. 
+	- Para toda posicion de e.mapa cuyo valor es 2 una de sus posiciones adyacentes debe ser 1 y el resto de sus posiciones adyacentes debe ser 0.
+
+---
+c) Función de abstracción:
+Abs: estr ⇒ Mapa				{Rep(e)}
+(∀e:estr) Abs(e) =obs m:mapa | (1)∧(2)∧(3)∧(4)∧(5)
+donde:
+	(1)	≡ ancho(m) = e.ancho
+	(2)	≡ alto(m) = e.alto
+	(3)	≡ receptaculos(m) = e.receptaculos
+	(4)	≡ (∀ p:coordenada)(enRango(m,p) ⇒L esPared(m,p) ⇐⇒ e.mapa[π₁(p),π₂(p)] = 1) 
+	(5)	≡ (∀ p:coordenada)(enRango(m,p) ⇒L esRampa(m,p) ⇐⇒ e.mapa[π₁(p), π₂(p)] = 2) 
+					
+d) Algoritmos:
+
+		iNuevoMapa(in alto: int, in ancho: int, in rs : diccTrie(color)){ 
+			estr_mapa.ancho=ancho;
+			estr_mapa.alto=alto;
+			estr_mapa.receptaculos = rs;	
+			estr_mapa.mapa=matriz(alto, ancho, 0);	// matriz(alto, ancho, 0) inicializa una matriz con cero en todas sus posiciones.
+			return estr_mapa;
+		}
+		
+		iAgregarPared(in/out m: estr, in posicion: coordenada){ 
+			m.ancho=ancho;
+			m.mapa[posicion.first, posicion.second] = 1;   //1 sea pared, 2 es rampa, 0 es piso
+		}
+		
+		iAgregarRampa(in/out m: estr, in posicion: coordenada){ 
+			m.mapa[posicion.first, posicion.second] = 2;
+		}
+		
+		iEsPiso(in m: estr, in posicion: coordenada){  
+			return m.mapa[posicion.first][posicion.second] == 0;
+		}
+		
+		iEsPared(in m:estr, in posicion: coordenada){ 
+			return m.mapa[posicion.first][posicion.second] == 1;
+		}
+		
+		iEsRampa(in m: mapa,in posicion: coordenada){
+			return m.mapa[posicion.first][posicion.second] == 2;
+		}
+		
+		iEnRango(in m: estr, in pos: coordenada){
+			return m.mapa.size() > pos.first && estr.mapa[0].size() > pos.second;
+		}
+			
+		iDist(in p1: coordenada,in p2: coordenada){
+			return abs(p1.first - p2.first) + abs(p1.second - p2.second);	//abs es valor absoluto
+		}
+		
+		---
+		3) Servicios usados:
+		Matriz es vector(vector(nat)) es un vector de vector de nat donde cada posición indica el tipo de casillero donde piso = 0, pared = 1 , rampa = 2.
+		Coordenada es tupla(nat,nat)
+		Color es string
+		Modulo diccTrie es un diccionario implementado sobre tries. Las claves son de tipo color y su significado es una tupla(nat,nat) que indica la pos del casillero asociada a ese color.
+						
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------	
+
+MODULO OBJETIVO 
+
+1) Interfaz:
+Parámetros formales:
+	Géneros:	α
+	Se explica con:	Objetivo
+Géneros: objetivo,mapa,simulacion
+---
+Operaciones básicas:
+  nuevoObjetivo(in color1: color, in color2: color)	-> res: objetivo
+	Pre ≡ {true}
+	Post ≡ {res =obs nuevoObjetivo(color1,color2)}
+	Complejidad: Θ(1)
+	Descripción: Genera un nuevo objetivo
+	Aliasing: Devuelve una referencia al nuevo objetivo. 
+	--- 
+	realizado?(in obj:objetivo, in sim: simulacion)	-> res: bool
+	Pre ≡ {def?(π₁(obj), sim.coloresObjetos) ∧ def?(π₂(obj), sim.mapa.receptáculo )} 
+	Post ≡ {res = true ⇐⇒ realizado?(obj,sim)}
+	Complejidad: Θ(|C|)
+	Descripción: Chequea que un objetivo este realizado en la simulacion. 
+	Aliasing: No presenta aspectos de aliasing.
+	
+	------------------------------------------------
+2) Implementacion
+a) Representación:
+	Objetivo se representa con estr donde 
+		estr es tupla ⟨	colorObjeto: color, 
+		                colorDestino: color ⟩
+
+b) Invariante de Representación:
+   - True 
+	// En la especificación del TAD Objetivo no hay ninguna restricción a la hora de generar algun objetivo. 
+---
+c) Función de abstracción:
+Abs: estr ⇒ Objetivo				{Rep(e)}
+(∀e:estr) Abs(e) =obs obj:objetivo | (1)∧(2)
+donde:
+	(1)	≡ colorObjeto(obj) = e.colorObjeto
+	(2)	≡ colorDestino(obj) = e.colorDestino
+--
+	d) Algoritmos:		
+		iNuevoObjetivo(in c1: string,in c2: string){		
+			return make_pair(c1,c2); 		
+		}
+			
+		iRealizado?(in obj: estr, in s: simulacion){
+			return obtener(s.mapa.receptaculos, obj.second) == s.iPosObjeto(obj.first);	// Θ(|c|) + Θ(|c|) = Θ(|c|) 
+		}			
+		---	
+3) Servicios usados:
+		Matriz es vector(vector(nat))
+		Coordenada es tupla(nat,nat)
+		Color es string
+		Módulo auxiliar de MAPA 
+		Módulo auxiliar de SIMULACION
+		----------------------------------------------------------------------------------------------------------------------------------------------------------
+MODULO SIMULACION 
+
+1) Interfaz:
+	Parámetros formales:
+		Géneros:	α
+	Se explica con:	Simulacion
+	Géneros:		simulacion,mapa,objetivo
+	
+	Operaciones básicas:
+		nuevaSimulacion(in m: mapa, in pos:coordenada, in objetos: dicc(color,coordenada))	-> res: simulacion
+		Pre ≡ {enRango(mapa,pos) ∧L ((∀c: color) def?(c, objetos) ⇒L (enRango(mapa, obtener(c, objetos)) ∧ obtener(c, objetos) ≠ i)) }
+		Post ≡ {res =obs nuevaSimulacion(mapa,pos,objetos)}
+		Complejidad: Θ(#(claves(objetos)))
+		Descripción: Genera una nueva simulacion.
+		Aliasing: Devuelve una referencia a la nueva simulación.
+		---	
+		mover(in/out sim: simulacion, in dir:direccion)	
+		Pre ≡ {enRango(sim.mapa, siguientePosicion(sim.posicionAgente,dir))}
+		Post ≡ {res =obs mover(sim,dir)}
+		Complejidad: Θ(|c|) 
+		Descripción: Mueve al agente de su posicion actual hacia la direccion dir. 
+		Aliasing: No presenta aspectos de aliasing.
+		---
+		agObjetivo(in/out sim: simulacion, in obj: objetivo)
+		Pre ≡ {sim.objetivo.colorObjeto(obj) ∈ claves(sim.coloresObjetos) ∧ def?(sim.objetivo.colorDestino(obj),  sim.mapa.receptaculos)}
+		Post ≡ {res =obs agObjetivo(sim,obj)}
+		Complejidad: Θ(|c|)
+		Descripción: Agrega un objetivo a los disponibles de la simulacion. 
+		Aliasing: No presenta aspectos de aliasing.
+		---
+		hayMovimiento(in pos: coordenada, in dir: direccion, in m:mapa)	-> res: bool
+		Pre ≡ {true}
+		Post ≡ {res =obs hayMovimiento(pos,dir,m)}
+		Complejidad: Θ(1)
+		Descripción: Chequea si se puede realizar el movimiento desde la posicion actual del agente hacia la direccion dir. 
+		Aliasing: No presenta aspectos de aliasing.
+		---
+		siguientePosición(in pos: coordenada, in dir:direccion)	-> res: coordenada
+		Pre ≡ {true}
+		Post ≡ {res =obs siguientePosicion(pos,dir)}
+		Complejidad: Θ(1)
+		Descripción: Devuelve la posicion del agente o un objeto despues de moverse hacia la direccion dir. 
+		Aliasing: No presenta aspectos de aliasing.
+		---
+		filtrarRealizados(in objetivos: conj(objetivo), in sim: simulacion)	-> res: conj(objetivo)
+		Pre ≡ {true}
+		Post ≡ {res =obs filtrarRealizados(objetivos,sim)}
+		Complejidad: Θ(#objetivos)
+		Descripción: Devuelve los objetivos realizados.
+		Aliasing: No presenta aspectos de aliasing.
+		---
+		hayObjeto(in pos: coordenada, in sim: simulacion)	-> res: bool
+		Pre ≡ {enRango(sim.mapa,pos)}
+		Post ≡ {res =obs hayObjeto(pos,dir)}
+		Complejidad: Θ(1) 
+		Descripción: Verifica si en la posicion pos hay un objeto. 
+		Aliasing: No presenta aspectos de aliasing.
+		---
+		hayAlgunObjeto(in pos: coordenada, in colores: conj(color), in sim: simulacion)	-> res: bool
+		Pre ≡ {enRango(sim.mapa,pos) ∧L colores ⊆ claves(sim.coloresObjetos)}
+		Post ≡ {res =obs hayAlgunObjeto(pos,colores,sim)}
+		Complejidad: Θ(#colores) 
+		Descripción: Verifica si en la simulacion hay algun objeto perteneciente al conj colores.
+		Aliasing: No presenta aspectos de aliasing.
+		--- 
+		posObjeto(in sim: simulacion, in c: color)	-> res: coordenada
+		Pre ≡ {c ∈ claves(sim.colorObjetos)}
+		Post ≡ {res =obs posObjeto(sim,c)}
+		Complejidad: Θ(|c|) // Es una busqueda en el diccTrie con claves color.
+		Descripción: Verifica si en la simulacion hay algun objeto de color c. 
+		Aliasing: No presenta aspectos de aliasing.
+				
+-----------------------------------------------------------------------------------
+
+2) Implementacion
+a) 	Representación:
+		Simulacion se representa con estr donde 
+		estr es tupla ⟨ posicionAgente: coordenada , 
+		               	cantMovimientos: nat ,
+									 	objetivosRealizados: nat ,
+										coloresObjetos: diccTrie(colorObjeto,<posicion, itObjetivo>) ,
+										objetivosDisponibles: conjLineal(objetivo)⟩ ,																		
+										matrizPosiciones: vector<vector<itColoresObjetos>> ,
+										mapa: mapa 
+									⟩
+---			
+b) Invariante de Representación:
+	  - estr.posicionAgente debe estar en rango.
+		- Para toda clave def? en estr.coloresObjetos π₁ de su significado debe estar en rango.
+		- Para todo objetivo que pertenezca a estr.objetivosDisponibles π₁ debe pertenecer a las claves de estr.coloresObjetos, y π₂ debe pertenecer 
+			a las claves de estr.mapa.receptaculos.
+		- estr.matrizPosiciones.size() debe ser igual a estr.mapa.size(), y estr.matrizPosiciones[0].size() debe ser igual a estr.mapa[0].size().
+		- Para toda posicion en rango de estr.matrizPosiciones que sea distinta a nullptr, π₁ del valor apuntado por itColoresObjetos
+		 	debe coincidir con su posicion actual de la matriz.
+	 	- En estr.matrizPosiciones no pueden existir dos itColoresObjetos en distintas posiciones que apunten a lo mismo. 
+	  - Para toda clave def? en estr.colorObjetos π₂ de su significado debe apuntar a un objetivo cuyo π₁ sea igual a dicha clave.
+	 	  
+	---
+c) Función de abstracción:
+Abs: estr ⇒ Simulacion			{Rep(e)}
+(∀e:estr) Abs(e) =obs sim:simulacion | (1)∧(2)∧(3)∧(4)∧(5)∧(6)∧(7)
+donde:
+	(1)	≡ mapa(sim) = e.mapa
+	(2)	≡ posJugador(sim) = e.posicionAgente
+  (3) ≡ cantMovimientos(sim) = e.cantMovimientos 
+	(4) ≡ objetivosDisponibles(sim) = e.objetivosDisponibles
+	(5) ≡ #objetivosRealizado(sim) = e.objetivosRealizados
+	(6) ≡ coloresObjetos(sim) = claves(e.coloresObjetos)
+	(7) ≡ (∀ c: color)(c ∈ estr.coloresObjetos ⇒L posObjeto(sim,c) = π₁(obtener(c, estr.colorObjetos))) ∧
+	      (∀ c: color)(def?(c, estr.coloresObjetos) ⇒L posObjeto(sim,c) = π₁(obtener(c, estr.colorObjetos))) // Ida y vuelta.
+--
+d) Algoritmos:
+			  iNuevaSimulacion(in mapa: mapa,in pos: coordenada, in objetos: dicc(color,pos)){
+				estr.mapa <- mapa;      
+				estr.matrizPosiciones <- vector<vector<itColoresObjetos>>(estr.matrizPosiciones.size(), vector<itColoresObjetos>(estr.matrizPosiciones[0].size(),  nullptr)); // Inicializa matriz con nulls.
+				estr.coloresObjetos <- vacío()
+				estr.posicionAgente <- pos; //Θ(1) porque es copiar tupla
+						
+				itObjetos <- crearIt(objetos)
+				while(itObjetos.HayMas?){      //Θ(#Claves(objetos))   
+					itColoresObjetos <- definir(estr.coloresObjetos, itObjetos.siguiente().first, make_pair(itObjetos.siguiente().second, nullptr))
+					matrizPosiciones.[itObjetos.Siguiente().second.first][itObjetos.Siguiente().second.second] <- itColoresObjetos
+					itObjetos.Avanzar();
+				}
+				estr.posicionAgente <- pos;  //Θ(1) porque es copiar tupla
+				estr.cantidadMovimientos <- 0;
+				estr.objetivosDisponibles <- vacío();
+				estr.objetivosRealizados <- 0;
+				return estr; 
+			}
+			
+			iAgObjetivo(in/out sim: estr, in obj: objetivo){
+		  	itObjetivo <- sim.objetivosDisponibles.agregarRapido(obj); // Θ(copy(obj)) = Θ(1)
+				if(obj.iRealizado?(obj, sim)){  //Θ(|c|) 
+					itObjetivo.eliminar(); //Θ(1) 
+					sim.objetivosCompletados <- sim.objetivosCompletados + 1; //Θ(1) 
+				} else {
+					posObj <- sim.iPosObjeto(sim, obj.first);// Θ(|c|) 
+					itColorObjeto <- definir(coloresObjetos,obj.second, make_pair(posObj, itObjetivo)); Θ(|c|) 
+					matrizPosiciones[posObj.first][posObj.second] <- itColorObjeto; //Θ(1) 
+				}
+			} // Complejidad total = Θ(|c|) 
+			
+			iHayMovimiento(in m: mapa,in posicion: coordenada,in dir: dir){
+				res = false; 
+				sigPos = siguientePosicion(posicion, dir); // Θ(1) 
+				if(enRango(m, sigPos)){ // Θ(1) 
+					res = true;
+					if (¬(m.esRampa(m, posicion)) && m.esPared(m, sigPos)){ // Θ(1) 
+							 res = false; 
+						}
+				}
+				return res; 
+			} // Complejidad total = Θ(1) 
+		 
+   	iSiguientePosicion(in pos: coordenada, in dir: dir){	
+			res <- pos; 
+			if(dir == "DER"){
+					res.first + 1;
+				} else if(dir == "IZQ") {
+					res.first - 1;
+				} else if(dir == "ARRIBA") {
+					res.second + 1;
+				}  else if(dir == "ABAJO") {
+					res.second - 1;
+				} 
+				return res;         
+			}
+							
+			iFiltrarRealizados(in/out sim: estr, in conj: estr.objetivosDisponibles){ // n = |conj|
+				itConj <- conj.crearIt() //Θ(1) 
+				while(itConj.HaySiguiente?()){  // Θ(n) 
+					objActual <- itConj.siguiente() //Θ(1) 
+					if(objActual.iRealizado?(sim, objActual)){ //Θ(1) 
+						itConj.Eliminar() //Θ(1)  
+					}
+					itConj.Avanzar() //Θ(1) 
+				}
+			} // Complejidad total =  Θ(n) + Θ(1) = Θ(n)
+			
+			iHayObjeto(in sim: estr, in pos: coordenada){
+				res = false;
+				itObjeto <- estr.matrizPosiciones[pos.first][pos.second] // Θ(1)
+				 if (itObjeto.haySiguiente?()){ // Θ(1) 
+					 res = true;  // Θ(1)
+				 } 
+				 return res;  // Θ(1)
+		} // Complejidad total = Θ(1)
+			
+				iHayAlgunObjeto(in sim: estr, in: cs: conj(color), in pos: coordenada){
+				res = false;
+				itObj <- crearIt(cs);
+				while(itObj.HayMas? && !res){ // Θ(|cs|)
+					if (posObjeto(sim, itObj) == pos){
+						res = true; 
+					}
+					itObj.Avanzar(); 
+				}
+			} 
+							
+  		iPosObjeto(in sim: estr, in col:color){
+         return obtener(sim.coloresObjetos, col).first; // Θ(|c|) porque busca en el diccTrie
+      }
+			
+			iMover(in/out sim: estr, in dir: dir){
+				sim.cantidadMovimientos <- sim.cantidadMovimientos + 1;
+				sePuedeMover <- hayMovimiento(sim,dir); 
+				if(sePuedeMover){
+					 	siguientePos <- siguientePosicion(sim.posAgente, dir); //sim y dir se pasan como parámetros por referencia no modificable, en Θ(1) y siguientePosicion() tiene una complejidad de Θ(1)
+						itObjeto <- sim.matrizPosiciones[siguientePos.first][siguientePos.second]; //Segun la consigna esto deberia ser Θ(|C|), pero en este caso al usar un iterador es Θ(1) ∈ Θ(|C|) 																																																																																											
+				  	hayObjeto <- itObjeto.haySiguiente?()		
+						sigDeSigPos <- siguientePosicion(siguientePos,dir);	
+						existeSiguientePosicion <- hayMovimiento(siguientePos, dir)
+						haySiguienteObjeto <- false;
+						if(existeSiguientePosicion){
+							haySiguienteObjeto <- sim.matrizPosiciones[sigDeSigPos.first][sigDeSigPos.second].haySiguiente?();
+							}
+						if(hayObjeto && !haySiguienteObjeto){
+							if(existeSiguientePosicion){
+								posicionObjeto <- itObjeto.siguiente().first
+								nuevaPosicionDelObjeto <- siguientePosicion(posicionObjeto, dir) 				
+								estr.matrizPosiciones[siguientePos.first][siguientePos.second] <- nullptr 
+								estr.matrizPosiciones[sigDeSigPos.first][sigDeSigPos.second] <- itObjeto
+
+								itObjetivo <- itObjeto.siguiente().second
+								tupla_nueva = make_pair(nuevaPosicionDelObjeto, itObjetivo)
+								if(itObjeto.siguiente().iRealizado(itObjetivo.siguiente(), sim)){ //esta operacion tiene una complejidad de Θ(|c|).
+									itObjetivo.eliminar();
+									sim.objetivosCompletados <- sim.objetivosCompletados + 1;
+									tupla_nueva.second = nullptr;
+								}
+								definir(coloresObjetos, colorObjeto, tupla_nueva)	// Θ(|C|)
+								sim.posicionAgente = siguientePos;
+								}
+						}else{
+							sim.posicionAgente = siguientePos;
+							}
+						}
+			}	
+		---
+3) Servicios usados:
+		Matriz es vector(vector(α))
+		Coordenada es tupla(nat,nat)
+		Color es string
+	  Módulo Dirección es ENUM {ARRIBA,ABAJO,IZQ,DER}
+		Módulo diccTrie		
+		Módulo auxiliar de MAPA 
+		Módulo auxiliar de OBJETIVO					

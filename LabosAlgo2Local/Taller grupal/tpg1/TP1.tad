@@ -1,0 +1,421 @@
+Trabajo Practico n°1, Taller de Algoritmos y Estructuras de Datos II.
+--- GRUPO GAJE ---
+Agustina Borsato LU: 41/21 
+Emanuel Porres LU: 264/20
+Guillermina Cabrol LU: 582/20
+Joaquín Gándara Stepñicka LU: 649/20
+-------------------------------------
+
+Decisiones:
+*Suponemos que todo si un casillero no es rampa ni elevacion, entonces es piso. 
+*Movimientos permitidos:
+	piso a piso, piso a rampa, piso a pared (contabiliza como movimiento, no cambia posición)
+	rampa a piso, rampa a rampa, rampa a elevación
+	elevación a piso, elevación a rampa, elevación a elevación
+	
+Parte 1 : 	
+
+TAD Casillero es Tupla ⟨nat, nat⟩
+TAD Grilla
+
+	Igualdad Observacional:	(∀g₀,g₁: grilla) (g₀ =obs g₁ 
+												⇐⇒ dimension(g₀) =obs dimension(g₁) ∧ 
+												∧  elevaciones(g₀) =obs elevaciones(g₁)) 
+												∧ rampas(g₀) =obs rampas(g₁)
+												);   
+	
+	Géneros: grilla
+	
+	Exporta: grilla, observadores, generadores, enRango
+	
+	Usa: Bool, Nat, Casillero, Conjunto, Tupla ⟨nat, nat⟩
+	
+	Observadores Básicos:
+		dimension: grilla -> tupla ⟨nat, nat⟩
+		elevaciones: grilla -> conj(casillero)
+		rampas: grilla -> conj(casillero)
+	
+	Generadores:
+		crearGrilla: tupla ⟨nat, nat⟩ dim x conj(casillero) elevaciones x conj(casillero) rampas	-> grilla 
+		     	{elevaciones ∩ rampas = Ø ∧ 
+						(∀ c : casillero)(c ∈ (elevaciones ∪ rampas) ⇒L enRango(π₁(dim), π₂(dim),c)) ∧L rampasCorrectas(elevaciones, rampas)}	
+	
+	Otras Operaciones:
+		enRango: nat x nat x casillero c -> bool 	
+		rampasCorrectas: conj(casillero) x conj(casillero) -> bool  
+		rampasCorrectasAux: casillero x conj(casillero) x conj(casillero) -> bool 
+		esAdyacente: casillero x casillero -> bool  
+		dameConjuntoAdyacentes: casillero x conjunto(casillero) -> conjunto(casilleros)		
+	
+	Axiomas:
+    	dimension(crearGrilla(dim, elevaciones, rampas)) ≡ dim 
+		elevaciones(crearGrilla(dim, elevaciones, rampas)) ≡ elevaciones
+		rampas(crearGrilla(dim, elevaciones, rampas)) ≡ rampas
+		enRango(l,a,c) ≡ 0 ≤ π₁(c) ∧ π₁(c) ≤ l ∧ 0 ≤ π₂(c) ∧ π₂(c) ≤ a 
+		rampasCorrectas(elevaciones, rampas) ≡ rampasCorrectasAux(dameUno(rampas), elevaciones, rampas) ∧ rampasCorrectas(sinUno(rampas), elevaciones)
+		rampasCorrectasAux(rampa, elevaciones, rampas) ≡ if Ø?(elevaciones) then
+															false
+														 else 
+															1 ≤ #(dameConjuntoAdyacentes(rampa, elevaciones)) ≤ 3 ∧ #(dameConjuntoAdyacentes(rampa, elevaciones)) + #(dameConjuntoAdyacentes(rampa, rampas)) < 4 
+														 fi
+		dameConjuntoAdyacentes(casillero, conjunto) ≡ if Ø?(conjunto) then
+														Ø
+													  else
+														if esAdyacente(casillero, dameUno(conjunto)) then
+															Ag(dameUno(conjunto), dameConjuntoAdyacentes(sinUno(conjunto)))
+														else
+															dameConjuntoAdyacentes(sinUno(conjunto))
+														fi
+													  fi
+
+    	esAdyacente(casillero_1, casillero_2) ≡ (π₁(casillero_2) =  π₁(casillero_1) ∧ π₂(casillero_2) - 1 = π₂(casillero_1)) ∨
+												(π₁(casillero_2) - 1 =  π₁(casillero_1) ∧ π₂(casillero_2) = π₂(casillero_1)) ∨
+												(π₁(casillero_2) + 1 =  π₁(casillero_1) ∧ π₂(casillero_2) = π₂(casillero_1)) ∨
+										  	    (π₁(casillero_2) =  π₁(casillero_1) ∧ π₂(casillero_2) + 1 = π₂(casillero_1))
+
+Fin TAD
+
+
+
+TAD Direccion es ENUM {'IZQUIERDA', 'DERECHA', 'ARRIBA', 'ABAJO'}
+
+TAD Algo2landia
+
+	Igualdad Observacional:(∀a₀,a₁: algo2landia) (a₀ =obs a₁ 
+												⇐⇒ (grillaDelJuego(a₀) =obs grillaDelJuego(a₁) ∧ 
+												posicionActual(a₀) =obs posicionActual(a₁) ∧ 
+												cantMovimientos(a₀) =obs cantMovimientos(a₁)
+												))
+	Géneros: algo2landia
+	
+	Exporta: algo2landia, observadores, generadores, chocaConPared, sigMov
+	
+	Usa: Bool, Nat, Conjunto, Direccion, Grilla, Casillero
+	
+	Observadores Básicos:		
+		grillaDelJuego: algo2landia -> grilla
+		posicionActual: algo2landia -> casillero
+		cantMovimientos: algo2landia -> nat
+
+	Generadores:
+		iniciarAlgo2Landia:	grilla g x casillero c -> algo2landia { enRango(π₁(dimension(g)), π₂(dimension(g)),c) }
+		moverAgente: algo2landia a x direccion d -> algo2landia   { enRango(π₁(dimension(grillaDelJuego(a))), π₂(dimension(grillaDelJuego(a))), sigMov(posicionActual(a),d)) }
+		
+	Otras Operaciones: 
+		chocaConPared: casillero x casillero x algo2landia -> bool
+		sigMov: casillero x direccion -> casillero 
+
+	Axiomas:
+	 	grillaDelJuego(iniciarAlgo2Landia(g,c)) ≡ g
+		grillaDelJuego(moverAgente(a,d)) ≡ grillaDelJuego(a)
+		
+		posicionActual(iniciarAlgo2Landia(g,c)) ≡ c
+		posicionActual(moverAgente(a,d)) ≡ if chocaConPared(posicionActual(a), sigMov(posicionActual(a), d),a) then
+											  posicionActual(a)
+										   else
+											  sigMov(posicionActual(a), d)
+										   fi
+		
+		sigMov(casillero, direccion) ≡ if direccion = 'IZQUIERDA' then
+										⟨ π₁(casillero) - 1 , π₂(casillero) ⟩ 
+									   else 
+							  		     if direccion = 'DERECHA' then 	
+											⟨ π₁(casillero) + 1, π₂(casillero) ⟩  
+										 else 
+							 				if direccion = 'ABAJO' then
+												⟨ π₁(casillero), π₂(casillero) + 1 ⟩ 
+											else 
+						 						⟨ π₁(casillero) , π₂(casillero) - 1 ⟩ 
+											fi  
+									     fi  
+							 		   fi 
+	 
+    	chocaConPared(posA, posS, a) ≡ ¬(posA ∈ rampas(grillaDelJuego(a)) ∨ posA ∈ elevaciones(grillaDelJuego(a))) ∧ posS ∈ elevaciones(grillaDelJuego(a))
+	
+		cantMovimientos(iniciarAlgo2Landia(g,c)) ≡ 0 
+	  	cantMovimientos(moverAgente(a,d)) ≡ cantMovimientos(a) + 1 
+	
+Fin TAD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Parte 2:
+
+TAD Color es String
+TAD Casillero es Tupla ⟨nat, nat, Color⟩ //los casilleros que no son de color dice sinColor
+TAD Grilla
+
+	Igualdad Observacional:	(∀g₀,g₁: grilla) (g₀ =obs g₁ 
+											⇐⇒ dimension(g₀) =obs dimension(g₁) ∧
+											∧ elevaciones(g₀) =obs elevaciones(g₁) 
+											∧ rampas(g₀) =obs rampas(g₁)
+											∧ pisos(g₀) =obs pisos(g₁)
+											);     
+	
+	Géneros: grilla
+	
+	Exporta: grilla, observadores, generadores, enRango, color
+	
+	Usa: Bool, Nat, Casillero, Conjunto, Tupla ⟨nat, nat, Color⟩
+	
+	Observadores Básicos:
+		dimension: grilla -> tupla ⟨nat, nat⟩
+		elevaciones: grilla -> conj(casillero)
+		rampas: grilla -> conj(casillero)
+		pisos: grilla -> conj(casillero)
+
+	Generadores:
+		crearGrilla: tupla ⟨nat, nat⟩ dim x conj(casillero) elevaciones x conj(casillero) rampas x conj(casillero) pisos -> grilla 
+				{ elevaciones ∩ rampas = Ø ∧ 
+					((∀ c : casillero)({c} ⊆ (elevaciones ∪ rampas ∪ pisos) ⇒L enRango(π₁(dim), π₂(dim), π₁(c), π₂(c))) ∧L rampasCorrectas(elevaciones, rampas) ∧ #(elevaciones ∪ rampas ∪ pisos) = π₁(dim) * π₂(dim)) ∧
+					(∀ c, c' : casillero)({c,c'} ⊆ (elevaciones ∪ rampas ∪ pisos) ∧ ¬(c = c') ⇒L (¬(color(c)=color(c')) ∨ (color(c) = "sinColor" ∧ color(c') = "sinColor")))}	
+	
+	Otras Operaciones:
+		sonDeColores: grilla g x conj(casillero) c -> conj(casillero) 		
+		enRango: nat x nat	x nat x nat -> bool 	
+		rampasCorrectas: conj(casillero) x conj(casillero) -> bool  
+		rampasCorrectasAux: casillero x conj(casillero) x conj(casillero) -> bool 
+		esAdyacente: casillero x casillero -> bool  
+		dameConjuntoAdyacentes: casillero x conjunto(casillero) -> conjunto(casilleros)	
+		color: casillero c -> color
+		
+	Axiomas:
+    	dimension(crearGrilla(dim, elevaciones, rampas, pisos)) ≡ dim 
+		elevaciones(crearGrilla(dim, elevaciones, rampas, pisos)) ≡ elevaciones
+		rampas(crearGrilla(dim, elevaciones, rampas, pisos)) ≡ rampas
+		pisos(crearGrilla(dim, elevaciones, rampas, pisos)) ≡ pisos
+		sonDeColores(g,c) ≡ if Ø?(c) then
+	                         Ø 
+							else
+						 	  if ¬(color(dameUno(c)) = "sinColor") then 
+	 						    Ag(dameUno(c), sonDeColores(g,sinUno(c)))	
+				              else 
+							    sonDeColores(g,sinUno(c)) 
+				              fi 
+						    fi 
+		
+		enRango(l,a, x, y) ≡ 0 ≤ x ∧ x ≤ l ∧ 0 ≤ y ∧ y ≤ a 
+		rampasCorrectas(elevaciones, rampas) ≡ rampasCorrectasAux(dameUno(rampas), elevaciones, rampas) ∧ rampasCorrectas(sinUno(rampas), elevaciones)
+		rampasCorrectasAux(rampa, elevaciones, rampas) ≡ if Ø?(elevaciones) then
+															false
+														 else 
+															1 ≤ #(dameConjuntoAdyacentes(rampa, elevaciones)) ≤ 3 ∧ #(dameConjuntoAdyacentes(rampa, elevaciones)) + #(dameConjuntoAdyacentes(rampa, rampas)) < 4 
+														 fi
+		dameConjuntoAdyacentes(casillero, conjunto) ≡ if Ø?(conjunto) then
+															Ø
+														else
+															if esAdyacente(casillero, dameUno(conjunto)) then
+																Ag(dameUno(conjunto), dameConjuntoAdyacentes(sinUno(conjunto)))
+															else
+																dameConjuntoAdyacentes(sinUno(conjunto))
+															fi
+														fi
+		
+    	esAdyacente(casillero_1, casillero_2) ≡ (π₁(casillero_2) =  π₁(casillero_1) ∧ π₂(casillero_2) - 1 = π₂(casillero_1)) ∨
+												(π₁(casillero_2) - 1 =  π₁(casillero_1) ∧ π₂(casillero_2) = π₂(casillero_1)) ∨
+												(π₁(casillero_2) + 1 =  π₁(casillero_1) ∧ π₂(casillero_2) = π₂(casillero_1)) ∨
+										   		(π₁(casillero_2) =  π₁(casillero_1) ∧ π₂(casillero_2) + 1 = π₂(casillero_1))
+		color(c) ≡ π₃(c)																			
+																						
+Fin TAD
+
+TAD Color es String
+TAD Casillero es Tupla ⟨nat, nat, Color⟩ 
+TAD Direccion es ENUM {'IZQUIERDA', 'DERECHA', 'ARRIBA', 'ABAJO'}
+TAD Objeto es Casillero 
+TAD Objetivo es Tupla ⟨color,color⟩
+TAD Algo2landia
+
+	Igualdad Observacional:(∀a₀,a₁: algo2landia) (a₀ =obs a₁ ⇐⇒
+												 	(grillaDelJuego(a₀) =obs grillaDelJuego(a₁) ∧ posicionActual(a₀) =obs posicionActual(a₁) ∧ 
+													cantMovimientos(a₀) = cantMovimientos(a₁) ∧ posActualObjetos(a₀) =obs posActualObjetos(a₁) ∧ 
+													objetivosSinCumplir(a₀) =obs objetivosSinCumplir(a₁) ∧
+													objetivosRealizados(a₀) =obs objetivosRealizados(a₁))))
+	Géneros: algo2landia
+	
+	Exporta: algo2landia, observadores, generadores, otras operaciones
+	
+	Usa: Bool, Nat, Conjunto, Tupla⟨nat,nat⟩, Direccion, Grilla, Casillero, Color, Objeto, Objetivo
+	
+	Observadores Básicos:		
+		grillaDelJuego: algo2landia -> grilla
+		posicionActual: algo2landia -> casillero
+		cantMovimientos: algo2landia -> nat
+		posActualObjetos: algo2landia -> conj(objeto)    
+		objetivosSinCumplir: algo2landia -> conj(objetivo) 
+		objetivosRealizados: algo2landia -> conj(objetivo)  
+
+	Generadores:
+		iniciarAlgo2Landia:	grilla g x casillero c x conj(objeto) objetos -> algo2landia	
+		{ enRango(π₁(dimension(g)), π₂(dimension(g)), π₁(c), π₂(c)) ∧ (∀ o, o' : objeto)({o,o'} ⊆ (objetos) ∧ (enRango(π₁(dimension(g)), π₂(dimension(g)), π₁(o), π₂(o)) ∧ enRango(π₁(dimension(g)), π₂(dimension(g)), π₁(o'), π₂(o')))
+		 ∧L ¬(o = o') ⇒L (¬(color(o)=color(o')) ∨ (color(o) = "sinColor" ∧ color(o') = "sinColor")) }
+		moverAgente: algo2landia a x direccion d -> algo2landia   { enRango(π₁(dimension(grillaDelJuego(a))), π₂(dimension(grillaDelJuego(a))), sigMov(posicionActual(a),d)) }
+		agregarObjetivo: algo2landia a x conj(objetivo) objetivos -> algo2landia { (∀ o: objetivo)(o ∈ objetivos ⇒L (∃ ob: objeto)(ob ∈ posActualObjetos(a) ∧L color(ob) = π₁(o)) ∧ 
+			(∃ c:casillero)(c ∈ (elevaciones(grillaDelJuego(a)) ∪ rampas(grillaDelJuego(a)) ∪ pisos(grillaDelJuego(a))) ∧L color(c) = π₂(o)))}
+    // El agente tiene un conjunto de objetivos a cumplir y no es necesario seleccionar uno para cumplirlo, es decir, si se cumple cualquier objetivo en objetivosSinCumplir(a) producto de un movimiento generado por el agente, dicho se objetivo se cumplirá          
+						
+	Otras Operaciones: 
+		chocaConPared: algo2landia x casillero x casillero  -> bool
+		sigMovObjeto:algo2landia x direccion -> objeto 
+		sigMov: algo2landia a × casillero c x direccion -> casillero    				 {enRango(π₁(dimension(grillaDelJuego(a))),π₂(dimension(grillaDelJuego(a))),π₁(c),π₂(c))}	 
+		recuperarColor: algo2landia a × conj(casillero) cc × tupla(nat,nat) cor -> color {enRango(π₁(dimension(grillaDelJuego(a))),π₂(dimension(grillaDelJuego(a))), π₁(cor), π₂(cor))}
+		rendimiento: algo2landia -> tupla<nat,nat>        
+		hayObjeto?: casillero x conj(objeto) -> bool
+		devolverObjeto: casillero c x conj(casillero) cc -> objeto      				 {hayObjeto?(c,cc)}
+		elObjetoSeVaDelMapa: algo2landia × direccion -> bool 
+		cumpleObjetivo?: algo2landia x casillero × casillero -> bool
+		devolverObjetivo: color x color x objetivos -> conj(objetivo)
+		cantObjetivosRealizados: conj(objetivo) -> nat 
+	
+	//Operaciones auxiliares:
+		dosObjetosSeguidos: algo2landia × direccion -> bool 
+		objetoEnPosSigYPared: algo2landia × direccion -> bool 
+		
+	Axiomas: 
+	 	grillaDelJuego(iniciarAlgo2Landia(g,c,objetos)) ≡ g
+		grillaDelJuego(moverAgente(a,d)) ≡ grillaDelJuego(a)
+		grillaDelJuego(agregarObjetivo(a,objetivos)) ≡ grillaDelJuego(a)  
+				
+		posicionActual(iniciarAlgo2Landia(g,c,objetos)) ≡ c
+		posicionActual(moverAgente(a,d)) ≡ if chocaConPared(posicionActual(a), sigMov(posicionActual(a), d),a) ∨ dosObjetosSeguidos(a,d) ∨ objetoEnPosSigYPared(a,d) then
+											posicionActual(a) 
+										else
+											sigMov(posicionActual(a), d)
+										fi
+		posicionActual(agregarObjetivo(a,objetivos)) ≡ posicionActual(a)
+		
+		cantMovimientos(iniciarAlgo2Landia(g,c,objetos)) ≡ 0 
+		cantMovimientos(moverAgente(a,d)) ≡ cantMovimientos(a) + 1  
+		cantMovimientos(agregarObjetivo(a,objetivos)) ≡ cantMovimientos(a)
+		
+		posActualObjetos(iniciarAlgo2Landia(g,c,objetos)) ≡ objetos 
+		posActualObjetos(moverAgente(a,d)) ≡ if hayObjeto?(sigMov(a,posicionActual(a),d),posActualObjetos(a)) ∧L ¬(elObjetoSeVaDelMapa(a,d)) then
+												if ¬(hayObjeto?(sigMov(a,sigMov(a,posicionActual(a),d),d),posActualObjetos(a))) ∧ ¬(chocaConPared(a, sigMov(a, posicionActual(a),d), sigMov(a,sigMov(a,posicionActual(a),d), d))) then
+													Ag(sigMovObjeto(a,d), posActualObjetos(a) - {devolverObjeto(sigMov(a,posicionActual(a), d), posActualObjetos(a))})
+												else 
+													posActualObjetos(a)
+												fi
+											 else
+											 	posActualObjetos(a)
+										    fi															
+		posActualObjetos(agregarObjetivo(a,objetivos)) ≡ posActualObjetos(a) 		
+		
+		objetivosSinCumplir(iniciarAlgo2Landia(g,c,objetos)) ≡ Ø   //Asumimos que cuando arranca la simulacion no hay objetivos que cumplir (se van agregando con el generador agregarObjetivo)
+		objetivosSinCumplir(moverAgente(a,d)) ≡ if hayObjeto?(sigMov(a,posicionActual(a),d),posActualObjetos(a)) ∧ cumpleObjetivo?(a,sigMov(a,sigMov(a,posicionActual(a),d),d),devolverObjeto(sigMov(a,(a,posicionActual(a),d),d), posActualObjetos(a))) then
+													objetivosSinCumplir(a) - devolverObjetivo(color(sigMov(a,sigMov(a,posicionActual(a),d),d)),color(devolverObjeto(sigMov(a,posicionActual(a),d), posActualObjetos(a))), objetivosSinCumplir(a))
+												else
+													objetivosSinCumplir(a)
+												fi
+		objetivosSinCumplir(agregarObjetivo(a,objetivos)) ≡ objetivosSinCumplir(a) ∪ objetivos		
+		
+		objetivosRealizados(iniciarAlgo2Landia(g,c,objetos)) ≡ Ø
+		objetivosRealizados(moverAgente(a,d)) ≡ if hayObjeto?(sigMov(a,posicionActual(a),d),posActualObjetos(a)) ∧ cumpleObjetivo?(a,sigMov(a,sigMov(a,posicionActual(a),d),d),devolverObjeto(sigMov(a,posicionActual(a),d), posActualObjetos(a))) then
+									  			devolverObjetivo(color(sigMov(a,sigMov(a,posicionActual(a),d),d),
+													color(devolverObjeto(sigMov(a,posicionActual(a),d), posActualObjetos(a))), objetivosSinCumplir(a)) ∪ objetivosRealizados(a)) 
+												else
+													objetivosRealizados(a)
+												fi
+	 	objetivosRealizados(agregarObjetivo(a,objetivos)) ≡ objetivosRealizados(a)																				
+	
+		//Otras Operaciones:	
+		chocaConPared(posA, posS, a) ≡ ¬(posA ∈ rampas(grillaDelJuego(a)) ∨ posA ∈ elevaciones(grillaDelJuego(a))) ∧ posS ∈ elevaciones(grillaDelJuego(a))
+			
+  		sigMovObjeto(a, d) ≡ ⟨ π₁(sigMov(a, sigMov(a,posicionActual(a),d),d)), π₂(sigMov(a, sigMov(a,posicionActual(a),d),d)), recuperarColor(a,posActualObjetos(a), ⟨π₁(sigMov(a, sigMov(a,posicionActual(a),d),d)), π₂(sigMov(a, sigMov(a,posicionActual(a),d),d))⟩) ⟩		
+																		
+		elObjetoSeVaDelMapa(a,d) ≡ ¬enRango(π₁(dimension(grillaDelJuego(a))),π₂(dimension(grillaDelJuego(a))),π₁(sigMov(a,sigMov(a,posicionActual(a),d),d)),π₂(sigMov(a,sigMov(a,posicionActual(a),d),d)))																	
+    
+		hayObjeto?(casillero,cc) ≡ if Ø?(cc) then
+									false
+								 else
+									if (π₁(dameUno(cc)) = π₁(casillero) ∧ π₂(dameUno(cc)) = π₂(casillero)) then
+										true
+									else
+										devolverObjeto(casillero, sinUno(cc))
+								  fi
+								fi
+															 																		          
+		devolverObjeto(casillero, cc) ≡  if (π₁(dameUno(cc)) = π₁(casillero) ∧ π₂(dameUno(cc)) = π₂(casillero)) then //No es necesario poner el caso base de conjunto vacio ya que siempre va a haber un objeto en casillero
+											dameUno(cc)
+										else
+											devolverObjeto(casillero, sinUno(cc))
+										fi
+																																			
+		sigMov(a,casillero, direccion) ≡ if direccion = 'IZQUIERDA' then
+											⟨ π₁(casillero) - 1 , π₂(casillero), recuperarColor(a,dameTodosCasilleros(a), ⟨ π₁(casillero) - 1, π₂(casillero)⟩)⟩ 
+										else 
+								  		if direccion = 'DERECHA' then 	
+												⟨ π₁(casillero) + 1, π₂(casillero), recuperarColor(a,dameTodosCasilleros(a), ⟨ π₁(casillero) + 1, π₂(casillero)⟩)⟩  ⟩  
+											else 
+								 				if direccion = 'ABAJO' then
+													⟨ π₁(casillero), π₂(casillero) + 1, recuperarColor(a,dameTodosCasilleros(a), ⟨ π₁(casillero), π₂(casillero) + 1⟩)⟩ ⟩ 
+												else 
+							 						⟨ π₁(casillero) , π₂(casillero) - 1, recuperarColor(a,dameTodosCasilleros(a), ⟨ π₁(casillero), π₂(casillero) - 1⟩)⟩  ⟩ 
+												fi  
+										  fi  
+								 		fi 
+
+	  	dameTodosCasilleros(a) ≡ elevaciones(grillaDelJuego(a)) ∪ rampas(grillaDelJuego(a)) ∪ pisos(grillaDelJuego(a))
+		
+		recuperarColor(a,cc,cor) ≡ 	if (π₁(dameUno(cc)) = π₁(cor) ∧ π₂(dameUno(cc)) = π₂(cor)) then    //Nunca el casillero cor no va a estar en el conjunto porque se pide como restriccion que este en rango, entonces no es necesario poner el caso base de conjunto vacio 
+									  π₃(dameUno(cc)) 
+								  else 
+										recuperarColor(a,sinUno(cc),cor)
+									fi
+														
+		cumpleObjetivo?(a, cas, obj) ≡ ¬ Ø?(devolverObjetivo(color(cas), color(obj), objetivosSinCumplir(a)))
+
+		devolverObjetivo(c1, c2, objetivos) ≡ if Ø?(objetivos) then
+												Ø
+											else
+												if π₁(dameUno(objetivos)) = c1 ∧ π₂(dameUno(objetivos)) = c2  then
+													{dameUno(objetivos)}
+												else
+													devolverObjetivo(c1, c2, sinUno(objetivos))
+												fi
+											fi
+		
+  		rendimiento(a) ≡ ⟨#(objetivosRealizados(a)), cantMovimientos(a)⟩ 
+	
+		cantObjetivosRealizados(co) ≡ #objetivosRealizados(a) 
+	
+		dosObjetosSeguidos(a,d) ≡ hayObjeto?(sigMov(a,posicionActual(a),d),posActualObjetos(a)) ∧ hayObjeto?(sigMov(a,sigMov(a,posicionActual(a),d),d),posActualObjetos(a)) 
+	
+		objetoEnPosSigYPared(a,d) ≡	hayObjeto?(sigMov(a,posicionActual(a),d),posActualObjetos(a)) ∧ ¬enRango(π₁(dimension(grillaDelJuego(a))),π₂(dimension(grillaDelJuego(a))), π₁(sigMov(a,sigMov(a,posicionActual(a),d),d)), π₂(sigMov(a,sigMov(a,posicionActual(a),d),d))
+
+Fin TAD

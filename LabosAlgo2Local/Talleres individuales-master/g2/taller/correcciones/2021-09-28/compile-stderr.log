@@ -1,0 +1,25 @@
+In file included from ../../../../../../taller2/lista_tests.cpp:2:0:
+./Lista.h: In constructor ‘Lista::Lista()’:
+./Lista.h:100:9: warning: ‘Lista::_longitud’ will be initialized after [-Wreorder]
+     int _longitud;
+         ^~~~~~~~~
+./Lista.h:98:11: warning:   ‘Lista::Nodo* Lista::_primero’ [-Wreorder]
+     Nodo *_primero;
+           ^~~~~~~~
+In file included from ./Lista.h:106:0,
+                 from ../../../../../../taller2/lista_tests.cpp:2:
+./Lista.hpp:3:1: warning:   when initialized here [-Wreorder]
+ Lista::Lista() : _longitud(0), _primero(nullptr), _ultimo(nullptr) {}
+ ^~~~~
+./Lista.hpp: In member function ‘void Lista::eliminar(Nat)’:
+./Lista.hpp:58:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     while (cont < longitud() && cont != i && temp != nullptr) {
+                                 ~~~~~^~~~
+./Lista.hpp: In member function ‘const int& Lista::iesimo(Nat) const’:
+./Lista.hpp:89:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         if (pos == i) {
+             ~~~~^~~~
+./Lista.hpp: In member function ‘int& Lista::iesimo(Nat)’:
+./Lista.hpp:104:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         if (pos == i) {
+             ~~~~^~~~
